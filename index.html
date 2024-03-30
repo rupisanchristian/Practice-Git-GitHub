@@ -4,8 +4,343 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+      <script src="https://kit.fontawesome.com/04b3229b62.js" crossorigin="anonymous"></script>
+    <style>
+   
+     
+        .side_navigation {
+            position: fixed;
+            width: 250px;
+            height: 100%;
+            background-color: white;
+            padding: 30px 0;
+            top: 0;
+            left: 0;
+            box-shadow: 0 2px 6px 0 rgba(218, 218, 253, 0.65), 0 2px 6px 0 rgba(206, 206, 238, 0.54);
+        }
+        .side_navigation h3 {
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .side_navigation ul li {
+            padding: 15px;
+            border-bottom: 1px solid rgba (0, 0, 0, 0.05);
+            border-top: 1px solid rgba (225, 225, 125, 0.05);
+        }
+        .side_navigation ul li a {
+            color:#253e48;
+            display: block;
+            transition: .4s;
+        }
+        .side_navigation ul li a .material-icons {
+            width: 34px;
+        }
+        .side_navigation ul li:hover {
+            background-color: antiquewhite;
+        }
+        .side_navigation ul li:hover a {
+            padding-left: 50px;
+        }
+
+        .side_navigation .link_social{
+            position: absolute;
+            bottom: 70px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+        }
+        .side_navigation .link_social a {
+            display: block;
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            line-height: 100px;
+            margin: 0 2px;
+            color:#253e48;
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .side_navigation .link_social a:hover {
+            background-color: antiquewhite;
+        }
+        
+
+        .per_page_layout .profile {
+       
+            padding: 0px 10px;
+            font-family: sans-serif;
+            text-align: center;
+            max-width: 50%;
+            top: 30%;
+            position: relative;
+        }
+
+        .per_page_layout .profile_image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+        }
+        
+        .per_page_layout {
+            justify-content: center;
+            height: 100vh !important;
+        }
+    
+        
+        /* Second home page */
+        .page .per_page_layout_aboutme .content_page {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .page .per_page_layout_aboutme .title_aboutme {
+            padding: 0px 10px;
+        }
+        .page .per_page_layout_aboutme .content_page .aboutme_page {
+          /* Same as the width of the sidebar */
+            padding: 0px 10px;
+            font-family: sans-serif;
+            text-align: left;
+            width: 56%;
+        }
+        .page .per_page_layout_aboutme .content_page .title_aboutme {
+           height: 10px;
+        }
+
+        .per_page_layout_aboutme {
+            overflow: auto;
+            
+            padding-top: 3rem !important;
+            padding-bottom: 3rem !important;
+            background-color: white;
+        } 
+
+        .page .per_page_layout_aboutme .content_page .skill_set .percentage_hs { 
+            background-color: rgb(192, 192, 192); 
+            width: 80%; 
+            border-radius: 15px; 
+        } 
+        .percentage { 
+            background-color: rgb(116, 194, 92); 
+            color: white; 
+            padding: 1%; 
+            text-align: right; 
+            font-size: 20px; 
+            border-radius: 15px; 
+        } 
+       
+        .page .per_page_layout_aboutme .content_page .skill_set .skill_percentage .skills_basic {
+            width: inherit;
+        }
+        .page .per_page_layout_aboutme .content_page .skill_set .skill_percentage {
+            flex: 0 0 auto;
+            width: 50%;
+        }
+        .page .per_page_layout_aboutme .content_page .img-prof-div .img-prof{
+            max-width: 100%;
+            vertical-align: middle;
+            object-fit: cover;
+            height: 800px;
+        }
+        .page .per_page_layout_aboutme .content_page .img-prof-div {
+            flex: 0 0 auto;
+            width: 41.66666667%;
+        }
+
+
+        /*Global Settings*/
+
+        /*Layout Character Settings*/
+        .mg-set {
+            margin-left: 10px;
+        }
+
+        .pd-set {
+            padding-top: .5rem !important;
+            padding-bottom: .5rem !important;
+        }
+        .ft-set {
+            font-size: 1rem !important;
+        }
+        
+        /*Character/Page/Paragraphs/Title Settings*/
+        
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: 'Josefin Sans', sans-serif;
+
+        }
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
+        .row { 
+        margin-bottom: 1rem !important;
+        margin-top: 1rem !important;
+        display: flex;
+        flex-wrap: wrap;
+        }
+        
+        .page {
+            margin-left: 250px;
+        }
+        p {
+        margin-bottom: 0px;
+        width: 100%;
+
+        }
+     
+        /*Body Settings*/
+        body {
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f8f9fa;
+        }
+
+    </style>
+
 </head>
 <body>
-    <h1>text</h1>
+    <div class="page">
+    <header>
+    <div class="side_navigation">
+        <h3>MAIN MENU</h3>
+        <ul>
+            <li><a href="#"><i class="material-icons">home</i>Home</a></li>
+            <li><a href="#"><i class="material-icons">person_outline</i>About Me</a></li>
+            <li><a href="#"><i class="material-icons">school</i>Education</a></li>
+            <li><a href="#"><i class="material-icons">videogame_asset</i>Hobbies/Interest</a></li>
+            <li><a href="#"><i class="material-icons">collections</i>Collections</a></li>
+            <li><a href="#"><i class="material-icons">contacts</i>Contact</a></li>
+            </ul>
+            <div class="link_social">
+                <a href="#" alt="facebook"><i class="fa-brands fa-facebook fa-2x"></i></a>
+                <a href="#" alt="youtube"><i class="fa-brands fa-youtube fa-2x"></i></a>
+            </div>
+        </div>
+    </header>  
+<div class="per_page_layout row">
+    <div class="profile">
+    <img src="https://tomclement1.files.wordpress.com/2020/04/ezio-banner-1.jpg?w=1200&h=800&crop=1" alt="Profile Image" class="profile_image">
+    <div class="profile_title"><h1>JUNIOR SOFTWARE DEVELOPER</h1></div>
+    <div class="profile_name"><h3>HELLO I am, Christian D. Rupisan</h3></div>
+    <div class="intro_duction pd-set ft-set">
+        <p>Mauris cursus libero eu gravida malesuada. Vivamus efficitur
+            sollicitudin tincidunt. Vivamus iaculis, est et posuere facilisis,
+            sem nisi volutpat enim, eget hendrerit libero ligula quis lacus
+        </p>
+</div>
+</div>
+</div>
+
+<div class="per_page_layout_aboutme row x3">
+    <div class="title_aboutme row mg-set">
+
+        <h2>ABOUT ME</h2>
+
+    </div>
+    <div class="content_page">
+        
+        <div class="aboutme_page mg-set">
+        <h3>I am, Christian D. Rupisan</h3>
+        <p class="pd-set ft-set">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar
+            magna ut bibendum imperdiet. Pellentesque habitant morbi tristique senectus et
+            netus et malesuada fames ac turpis egestas. Vestibulum id tempor libero. Praesent
+            vel magna eget purus dignissim interdum. Sed efficitur malesuada dui, ac interdum
+            ante scelerisque non. Curabitur quis euismod lorem, vel rutrum ante. Sed non vestibulum
+            turpis. Phasellus sit amet nisl in diam congue tristique. Nullam convallis lectus ac nisl
+            iaculis, non posuere ipsum interdum. Vivamus nec justo ac sapien convallis maximus.</p>
+    <h3>What is my skill level?</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ipsum sit nibh amet egestas tellus.</p>
+
+    <div class="skill_set row">
+        <div class="skill_percentage row">
+            <div class="skills_basic"><h4>Hardware Skills</h4></div>
+            <div class="percentage_hs">
+                <div class="percentage container" role="progressbar"
+                style="width: 70%;">70%</div>
+            </div>
+        </div>
+        <div class="skill_percentage row">
+            <div class="skills_basic"><h4>Software Skills</h4></div>
+            <div class="percentage_hs">
+                <div class="percentage container" role="progressbar"
+                style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="skill_percentage row">
+                <div class="skills_basic"><h4>CSS</h4></div>
+                <div class="percentage_hs">
+                <div class="percentage container" role="progressbar"
+                style="width: 65%;">65%</div>
+            </div>
+        </div>
+        <div class="skill_percentage row">
+            <div class="skills_basic"><h4>Java</h4></div>
+            <div class="percentage_hs">
+                <div class="percentage container" role="progressbar"
+                style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="skill_percentage row">
+            <div class="skills_basic"><h4>JavaScript</h4></div>
+            <div class="percentage_hs">
+                <div class="percentage container" role="progressbar"
+                style="width: 50%;">50%</div>
+            </div>
+        </div>
+        <div class="skill_percentage row">
+            <div class="skills_basic"><h4>HTML</h4></div>
+            <div class="percentage_hs">
+                <div class="percentage container" role="progressbar"
+                style="width: 80%;">80%</div>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+ 
+    
+    <div class="img-prof-div"><img src="https://tomclement1.files.wordpress.com/2020/04/ezio-banner-1.jpg?w=1200&h=800&crop=1" alt="Profile Image" class="img-prof"></div>
+ 
+    </div>
+    
+</div>
+
+<footer>
+
+</footer>
+
+</div>
+
+<script>
+    function openPage(pageName,elmnt,color) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablink");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
+    
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+    </script>
+    
 </body>
 </html>
